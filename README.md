@@ -1,4 +1,4 @@
-# 『밑바닥부터 시작하는 딥러닝 ❹』<br>이번엔 강화 학습이다!
+# 『밑바닥부터 시작하는 딥러닝 ❹』<br>: 이번엔 강화 학습이다!
 
 <a href="http://www.yes24.com/Product/Goods/72173703"><img src="https://github.com/WegraLee/deep-learning-from-scratch-4/blob/master/cover.jpeg" width="150" align=right></a>
 
