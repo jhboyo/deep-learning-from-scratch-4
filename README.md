@@ -7,7 +7,7 @@
 이 책의 특징은 제목 그대로 ‘밑바닥부터 만들어가는 것’입니다. 속을 알 수 없는 외부 라이브러리에 의존하지 않고 강화 학습 알고리즘을 처음부터 구현하면서 배웁니다. 그림으로 원리를 이해하고 수학으로 강화 학습 문제를 풀어본 다음, 코드로 구현해 배운 내용을 되짚어봅니다. 코드는 최대한 간결하면서도 강화 학습에서 중요한 아이디어가 명확하게 드러나도록 짰습니다. 단계적으로 수준을 높이면서 다양한 문제에 접할 수 있도록 구성하였으니 강화 학습의 어려움과 재미를 모두 느낄 수 있을 것입니다.
 
 
-[미리보기](https://preview2.hanbit.co.kr/books/yyxd/#p=1) | [정오표](https://docs.google.com/document/d/1fsPVXyPF0gpmN57VV6k0uxMfWXUbiQCwno8vCTYpMc8/edit) | [본문 그림과 수식 이미지 모음](https://github.com/WegraLee/deep-learning-from-scratch-4/blob/master/deep_learning_4_images_and_equations?raw=true)
+[미리보기](https://preview2.hanbit.co.kr/books/yyxd/#p=1) | [정오표](https://docs.google.com/document/d/1fsPVXyPF0gpmN57VV6k0uxMfWXUbiQCwno8vCTYpMc8/edit) | [본문 그림과 수식 이미지 모음](https://github.com/WegraLee/deep-learning-from-scratch-4/blob/master/deep_learning_4_images_and_equations.zip?raw=true)
 
 ---
 
