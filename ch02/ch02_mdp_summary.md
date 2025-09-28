@@ -27,63 +27,34 @@
 
 ## 5. MDP의 목표
 
-MDP의 목표는 **최적 정책 (Optimal Policy, $\pi^*$)**을 찾는 것임. 최적 정책은 에이전트가 시작부터 끝까지 얻을 수 있는 총 기대 보상 (Expected Return)을 최대화하는 정책임.
+MDP의 목표는 **최적 정책** (Optimal Policy, $\pi^*$)을 찾는 것임. 최적 정책은 에이전트가 시작부터 끝까지 얻을 수 있는 총 기대 보상 (Expected Return)을 최대화하는 정책임.
 
 ## 6. 가치 함수 (Value Function)
 
 가치 함수는 특정 상태나 특정 상태-행동 쌍의 "좋음"을 평가하는 데 사용됨.
 
-*   **상태 가치 함수 (State-Value Function, $V^\pi(s)$)**: 특정 정책 $\pi$를 따랐을 때, 상태 $s$에서 시작하여 얻을 수 있는 총 기대 보상을 나타냄.
+*   **상태 가치 함수** (State-Value Function, $V^\pi(s)$): 특정 정책 $\pi$를 따랐을 때, 상태 $s$에서 시작하여 얻을 수 있는 총 기대 보상을 나타냄.
     
     $V^\pi(s) = E_\pi[\sum_{t=0}^\infty \gamma^t R_{t+1} | S_t = s]$
 
-*   **행동 가치 함수 (Action-Value Function, $Q^\pi(s, a)$)**: 특정 정책 $\pi$를 따랐을 때, 상태 $s$에서 행동 $a$를 취한 후 얻을 수 있는 총 기대 보상을 나타냄.
+*   **행동 가치 함수** (Action-Value Function, $Q^\pi(s, a)$): 특정 정책 $\pi$를 따랐을 때, 상태 $s$에서 행동 $a$를 취한 후 얻을 수 있는 총 기대 보상을 나타냄.
     
     $Q^\pi(s, a) = E_\pi[\sum_{t=0}^\infty \gamma^t R_{t+1} | S_t = s, A_t = a]$
 
-### 벨만 방정식
-
-벨만 방정식은 가치 함수를 재귀적으로 정의하는 중요한 방정식임.
-
-*   **벨만 기대 방정식 (Bellman Expectation Equation)**:
-    
-    $V^\pi(s) = \sum_a \pi(a|s) \sum_{s'} P(s'|s,a) [R(s,a,s') + \gamma V^\pi(s')]$
-    
-    $Q^\pi(s,a) = \sum_{s'} P(s'|s,a) [R(s,a,s') + \gamma \sum_{a'} \pi(a'|s') Q^\pi(s',a')]$
 
 ## 7. 최적 가치 함수와 최적 정책
 
-*   **최적 상태 가치 함수 ($V^*(s)$)**: 모든 정책 중에서 가장 큰 상태 가치 함수임.
+*   **최적 상태 가치 함수** ($V^*(s)$): 모든 정책 중에서 가장 큰 상태 가치 함수임.
     
     $V^*(s) = \max_\pi V^\pi(s)$
 
-*   **최적 행동 가치 함수 ($Q^*(s, a)$)**: 모든 정책 중에서 가장 큰 행동 가치 함수임.
+*   **최적 행동 가치 함수** ($Q^*(s, a)$): 모든 정책 중에서 가장 큰 행동 가치 함수임.
     
     $Q^*(s, a) = \max_\pi Q^\pi(s, a)$
 
-*   **벨만 최적 방정식 (Bellman Optimality Equation)**:
-    
-    $V^*(s) = \max_a \sum_{s'} P(s'|s,a) [R(s,a,s') + \gamma V^*(s')]$
-    
-    $Q^*(s,a) = \sum_{s'} P(s'|s,a) [R(s,a,s') + \gamma \max_{a'} Q^*(s',a')]$
 
-최적 정책은 최적 행동 가치 함수를 통해 쉽게 도출될 수 있음.
 
-$\pi^*(a|s) = 1 \text{ if } a = \arg\max_{a'} Q^*(s, a') \text{ else } 0$
-
-## 8. GridWorld 예시
-
-3×4 격자 세계에서 에이전트가 목표 지점에 도달하는 문제
-
-```
-[0] [0] [0] [+1]  ← 목표 지점 (보상 +1)
-[0] [벽] [0] [-1]  ← 함정 (보상 -1)
-[S] [0] [0] [0]   ← S: 시작 지점
-```
-
-**가능한 행동**: 상(UP), 하(DOWN), 좌(LEFT), 우(RIGHT)
-
-## 9. MDP의 활용
+## 8. MDP의 활용
 
 MDP는 동적 계획법(Dynamic Programming)을 통해 해결될 수 있으며, 강화 학습의 이론적 기반이 됨. 정책 이터레이션(Policy Iteration)과 가치 이터레이션(Value Iteration)은 MDP를 푸는 대표적인 알고리즘임.
 
